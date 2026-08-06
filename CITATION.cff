@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: "If you use this dataset, please cite it as below."
+title: "NLK LOD × BIBFRAME 2.0 / IFLA LRM Alignment Table"
+authors:
+  - family-names: "[성]"
+    given-names: "[이름]"
+    orcid: "https://orcid.org/[ORCID]"
+    affiliation: "[소속 대학]"
+version: 1.0.0
+date-released: "2026-08-06"
+license: CC-BY-4.0
+repository-code: "https://github.com/[계정명]/nlk-lod-bibframe-lrm-alignment"
+keywords:
+  - linked open data
+  - BIBFRAME
+  - IFLA LRM
+  - national bibliography
+  - ontology alignment
+  - National Library of Korea
+preferred-citation:
+  type: article
+  title: "국가서지 LOD 온톨로지와 BIBFRAME 2.0 및 IFLA LRM의 개념적 정렬 분석"
+  authors:
+    - family-names: "[성]"
+      given-names: "[이름]"
+  journal: "[학술지명 — 게재 확정 시 기입]"
+  year: 2026
