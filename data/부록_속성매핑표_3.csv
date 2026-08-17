@@ -1,0 +1,158 @@
+연번,속성(nlon:),속성 유형,범주,BIBFRAME 2.0 대응(안),판정,판정 근거
+1,contain,객체 속성,자원 간 관계,bf:hasPart,동등,부분-전체 관계 직접 대응
+2,containedIn,객체 속성,자원 간 관계,bf:partOf,동등,부분-전체 관계 직접 대응
+3,hasSupplement,객체 속성,자원 간 관계,bf:supplement,동등,보유판 직접 대응
+4,issuedWith,객체 속성,자원 간 관계,bf:issuedWith,동등,직접 대응
+5,preceding,객체 속성,자원 간 관계,bf:precededBy,동등,선행저록 직접 대응
+6,series,객체 속성,자원 간 관계,bf:hasSeries,동등,총서 관계 직접 대응
+7,subSeries,객체 속성,자원 간 관계,bf:hasSubseries,동등,하위총서 직접 대응
+8,succeeding,객체 속성,자원 간 관계,bf:succeededBy,동등,후속저록 직접 대응
+9,supplementTo,객체 속성,자원 간 관계,bf:supplementTo,동등,직접 대응
+10,translatedAs,객체 속성,자원 간 관계,bf:translation,동등,"번역 관계 직접 대응(단, Work 계층 부재로 실효성 제약)"
+11,hasIssue,객체 속성,자원 간 관계,bf:hasPart + 권호 개체,부분 정렬,권호를 부분 저작으로 재해석 필요
+12,isSubjectOf,객체 속성,자원 간 관계,"bf:subjectOf 부재, bf:subject 역관계",부분 정렬,역관계 재구성
+13,mainSeries,객체 속성,자원 간 관계,bf:hasSeries(역방향 조합),부분 정렬,상위 대응
+14,typeOfData,객체 속성,유형·형식·주제,bf:content(bf:Content),부분 정렬,내용 유형으로 재배치
+15,typeOfResource,객체 속성,유형·형식·주제,bf:media / bf:carrier,부분 정렬,매체·수록매체 축으로 분해 필요
+16,typeOfContinuousData,객체 속성,연속간행물,bf:genreForm,부분 정렬,코드 리스트의 개념 재배치
+17,typeOfPublicationFrequency,객체 속성,연속간행물,bf:frequency(bf:Frequency),부분 정렬,승격 매핑
+18,typeOfPublicationStatus,객체 속성,연속간행물,bflc 확장 필요,부분 정렬,코어 대응 부재
+19,ddcn,객체 속성,분류·청구기호,bf:classification(bf:ClassificationDdc),부분 정렬,"치역이 skos:Concept, 승격 필요"
+20,kdcn,객체 속성,분류·청구기호,대응 부재(bf:ClassificationKdc 미존재),매핑 불가,어휘 간극: KDC
+21,relatedEvent,객체 속성,전거,madsrdf 전거 관계,부분 정렬,동일
+22,relatedOrganization,객체 속성,전거,madsrdf 전거 관계,부분 정렬,동일
+23,relatedPerson,객체 속성,전거,madsrdf 전거 관계,부분 정렬,"BF 코어 밖, MADS/RDF 병용 필요"
+24,relatedPlace,객체 속성,전거,madsrdf 전거 관계,부분 정렬,동일
+25,confirmedBy,객체 속성,관리 메타데이터,bf:adminMetadata + bf:AdminMetadata(bf:descriptionModifier),부분 정렬,개체화 수반: 자원 직접 부착이 아닌 AdminMetadata 개체 경유
+26,inputedBy,객체 속성,관리 메타데이터,bf:adminMetadata + bf:AdminMetadata(bf:descriptionModifier/bf:assigner),부분 정렬,개체화 수반: 자원 직접 부착이 아닌 AdminMetadata 개체 경유
+27,managedBy,객체 속성,관리 메타데이터,bf:adminMetadata + bf:AdminMetadata(bf:source/bf:assigner),부분 정렬,개체화 수반: 자원 직접 부착이 아닌 AdminMetadata 개체 경유
+28,modifiedBy,객체 속성,관리 메타데이터,bf:adminMetadata + bf:AdminMetadata(bf:descriptionModifier),부분 정렬,개체화 수반: 자원 직접 부착이 아닌 AdminMetadata 개체 경유
+29,awardedFrom,객체 속성,기타 기술 요소,bf:dissertation(bf:Dissertation/grantingInstitution),부분 정렬,학위 개체 승격
+30,create,객체 속성,기타 기술 요소,bf:contribution + bf:Contribution,부분 정렬,속성-개체 승격 및 역할 분리 필요
+31,isGeographicAreaOf,객체 속성,기타 기술 요소,bf:geographicCoverage(역),부분 정렬,역관계 재구성
+32,municipalLevel,객체 속성,기타 기술 요소,대응 부재,매핑 불가,"행정구역 수준, 서지 범위 외"
+33,provincialLevel,객체 속성,기타 기술 요소,대응 부재,매핑 불가,동일
+34,relationshipInformation,데이터 속성,자원 간 관계,bf:note(관계 주기),부분 정렬,의미 재배치
+35,headingOfOriginalLanguage,데이터 속성,연관저록(문자열화된 관계),관계 속성 + 관련 자원 개체 생성,부분 정렬,관계의 문자열화: 개체화(entification) 수반
+36,headingOfTranslation,데이터 속성,연관저록(문자열화된 관계),관계 속성 + 관련 자원 개체 생성,부분 정렬,관계의 문자열화: 개체화(entification) 수반
+37,mainEntryHeading,데이터 속성,연관저록(문자열화된 관계),관계 속성 + 관련 자원 개체 생성,부분 정렬,관계의 문자열화: 개체화(entification) 수반
+38,subseriesEntryHeading,데이터 속성,연관저록(문자열화된 관계),관계 속성 + 관련 자원 개체 생성,부분 정렬,관계의 문자열화: 개체화(entification) 수반
+39,titleOfAdditionalPhysicalForm,데이터 속성,연관저록(문자열화된 관계),관계 속성 + 관련 자원 개체 생성,부분 정렬,관계의 문자열화: 개체화(entification) 수반
+40,titleOfConstituentUnit,데이터 속성,연관저록(문자열화된 관계),관계 속성 + 관련 자원 개체 생성,부분 정렬,관계의 문자열화: 개체화(entification) 수반
+41,titleOfHostItem,데이터 속성,연관저록(문자열화된 관계),관계 속성 + 관련 자원 개체 생성,부분 정렬,관계의 문자열화: 개체화(entification) 수반
+42,titleOfIssuedWith,데이터 속성,연관저록(문자열화된 관계),관계 속성 + 관련 자원 개체 생성,부분 정렬,관계의 문자열화: 개체화(entification) 수반
+43,titleOfOriginalLanguage,데이터 속성,연관저록(문자열화된 관계),관계 속성 + 관련 자원 개체 생성,부분 정렬,관계의 문자열화: 개체화(entification) 수반
+44,titleOfOtherEdition,데이터 속성,연관저록(문자열화된 관계),관계 속성 + 관련 자원 개체 생성,부분 정렬,관계의 문자열화: 개체화(entification) 수반
+45,titleOfPreceding,데이터 속성,연관저록(문자열화된 관계),관계 속성 + 관련 자원 개체 생성,부분 정렬,관계의 문자열화: 개체화(entification) 수반
+46,titleOfSucceeding,데이터 속성,연관저록(문자열화된 관계),관계 속성 + 관련 자원 개체 생성,부분 정렬,관계의 문자열화: 개체화(entification) 수반
+47,titleOfSupplement,데이터 속성,연관저록(문자열화된 관계),관계 속성 + 관련 자원 개체 생성,부분 정렬,관계의 문자열화: 개체화(entification) 수반
+48,titleOfSupplementParent,데이터 속성,연관저록(문자열화된 관계),관계 속성 + 관련 자원 개체 생성,부분 정렬,관계의 문자열화: 개체화(entification) 수반
+49,titleOfTranslation,데이터 속성,연관저록(문자열화된 관계),관계 속성 + 관련 자원 개체 생성,부분 정렬,관계의 문자열화: 개체화(entification) 수반
+50,abbreviatedTitle,데이터 속성,표제,bf:AbbreviatedTitle,부분 정렬,속성-개체 승격(문자열→Title 개체)
+51,formerTitle,데이터 속성,표제,bf:VariantTitle(variantType),부분 정렬,속성-개체 승격(문자열→Title 개체)
+52,formerTitleComplexityNote,데이터 속성,표제,bf:note(bf:Note+noteType),부분 정렬,승격 매핑
+53,keyTitle,데이터 속성,표제,bf:KeyTitle,부분 정렬,속성-개체 승격(문자열→Title 개체)
+54,remainderOfTitle,데이터 속성,표제,bf:subtitle,부분 정렬,속성-개체 승격(문자열→Title 개체)
+55,titleOfMainSeries,데이터 속성,표제,bf:hasSeries+bf:title,부분 정렬,속성-개체 승격(문자열→Title 개체)
+56,titleOfSeries,데이터 속성,표제,bf:hasSeries+bf:title,부분 정렬,속성-개체 승격(문자열→Title 개체)
+57,titleOfSubSeries,데이터 속성,표제,bf:hasSubseries+bf:title,부분 정렬,속성-개체 승격(문자열→Title 개체)
+58,uniformTitle,데이터 속성,표제,bf:Hub/통일표제 재구조화,부분 정렬,속성-개체 승격(문자열→Title 개체)
+59,uniformTitleOfSeries,데이터 속성,표제,동일,부분 정렬,속성-개체 승격(문자열→Title 개체)
+60,genre,데이터 속성,유형·형식·주제,bf:genreForm,부분 정렬,승격 매핑
+61,keyword,데이터 속성,유형·형식·주제,bf:subject,부분 정렬,승격 매핑
+62,medium,데이터 속성,유형·형식·주제,bf:media/bf:carrier,부분 정렬,매체 축 분해 필요
+63,dateOfDistribute,데이터 속성,발행·제작·복제,bf:Distribution+bf:date,부분 정렬,속성-개체 승격(ProvisionActivity)
+64,dateOfManufacture,데이터 속성,발행·제작·복제,bf:Manufacture+bf:date,부분 정렬,속성-개체 승격(ProvisionActivity)
+65,distributionPlace,데이터 속성,발행·제작·복제,bf:Distribution+bf:place,부분 정렬,속성-개체 승격(ProvisionActivity)
+66,distributor,데이터 속성,발행·제작·복제,bf:Distribution+bf:agent,부분 정렬,속성-개체 승격(ProvisionActivity)
+67,manufacturer,데이터 속성,발행·제작·복제,bf:Manufacture+bf:agent,부분 정렬,속성-개체 승격(ProvisionActivity)
+68,manufacturingPlace,데이터 속성,발행·제작·복제,bf:Manufacture+bf:place,부분 정렬,속성-개체 승격(ProvisionActivity)
+69,producer,데이터 속성,발행·제작·복제,bf:Production+bf:agent,부분 정렬,속성-개체 승격(ProvisionActivity)
+70,productionPlace,데이터 속성,발행·제작·복제,bf:Production+bf:place,부분 정렬,속성-개체 승격(ProvisionActivity)
+71,publicationPlace,데이터 속성,발행·제작·복제,bf:Publication+bf:place,부분 정렬,속성-개체 승격(ProvisionActivity)
+72,reproductionDate,데이터 속성,발행·제작·복제,복제 ProvisionActivity 재구성,부분 정렬,개체화 수반
+73,reproductionInstitution,데이터 속성,발행·제작·복제,동일,부분 정렬,개체화 수반
+74,reproductionPlace,데이터 속성,발행·제작·복제,동일,부분 정렬,개체화 수반
+75,volumeOfSeries,데이터 속성,연속간행물,bf:seriesEnumeration,동등,직접 대응
+76,currentPublicationFrequency,데이터 속성,연속간행물,bf:frequency(bf:Frequency),부분 정렬,승격 매핑
+77,dateOfCurrentPublicationFrequency,데이터 속성,연속간행물,bf:Frequency+bf:date,부분 정렬,승격 매핑
+78,dateOfFormerPublicationFrequency,데이터 속성,연속간행물,bf:Frequency+bf:date,부분 정렬,승격 매핑
+79,dateOfPublicationSequentialDesignation,데이터 속성,연속간행물,bf:firstIssue/lastIssue,부분 정렬,의미 재배치
+80,dateSequentialDesignation,데이터 속성,연속간행물,bf:firstIssue/lastIssue,부분 정렬,의미 재배치
+81,formerPublicationFrequency,데이터 속성,연속간행물,bf:frequency+기간 한정,부분 정렬,승격 매핑
+82,relatedParts,데이터 속성,연속간행물,bf:seriesEnumeration 인접,부분 정렬,의미 재배치
+83,sourceOfInformation,데이터 속성,연속간행물,bf:source,부분 정렬,승격 매핑
+84,volumeOfNLK,데이터 속성,연속간행물,bf:enumerationAndChronology 인접,부분 정렬,의미 재배치
+85,classificationNumber,데이터 속성,분류·청구기호,bf:classificationPortion,동등,직접 대응
+86,itemNumber,데이터 속성,분류·청구기호,bf:itemPortion,동등,직접 대응
+87,classificationNumberOfLC,데이터 속성,분류·청구기호,bf:ClassificationLcc,부분 정렬,승격 매핑
+88,editionOfDDC,데이터 속성,분류·청구기호,bf:edition(ClassificationDdc),부분 정렬,승격 매핑
+89,itemNumberOfDDC,데이터 속성,분류·청구기호,bf:ClassificationDdc+itemPortion,부분 정렬,승격 매핑
+90,itemNumberOfLC,데이터 속성,분류·청구기호,bf:ClassificationLcc+itemPortion,부분 정렬,승격 매핑
+91,itemNumberOfOtherNumber,데이터 속성,분류·청구기호,bf:Classification(일반)+itemPortion,부분 정렬,승격 매핑
+92,otherNumber,데이터 속성,분류·청구기호,bf:Classification(일반),부분 정렬,승격 매핑
+93,sourceOfOtherNumber,데이터 속성,분류·청구기호,bf:source,부분 정렬,승격 매핑
+94,classificationNumberOfNLK,데이터 속성,분류·청구기호,대응 부재,매핑 불가,어휘 간극: NLK 청구기호
+95,editionOfKDC,데이터 속성,분류·청구기호,대응 부재,매핑 불가,어휘 간극: KDC
+96,itemNumberOfNLK,데이터 속성,분류·청구기호,대응 부재,매핑 불가,어휘 간극: NLK 청구기호
+97,itermNumberOfKDC,데이터 속성,분류·청구기호,대응 부재,매핑 불가,어휘 간극: KDC(URI 철자 오류 포함)
+98,cip,데이터 속성,식별자·부호,bf:identifiedBy(제어번호 일반형),부분 정렬,승격 매핑
+99,gpo,데이터 속성,식별자·부호,bf:identifiedBy(일반형),부분 정렬,승격 매핑
+100,isni,데이터 속성,식별자·부호,bf:identifiedBy(bf:Isni),부분 정렬,승격 매핑
+101,issnOfSeries,데이터 속성,식별자·부호,bf:hasSeries+bf:Issn,부분 정렬,승격+개체 생성
+102,strn,데이터 속성,식별자·부호,bf:identifiedBy(bf:Strn),부분 정렬,승격 매핑
+103,authenticationCode,데이터 속성,식별자·부호,대응 부재(MARC 042 계열),매핑 불가,코어 대응 부재
+104,gprn,데이터 속성,식별자·부호,대응 부재,매핑 불가,어휘 간극: 한국정부간행물 발간등록번호
+105,uci,데이터 속성,식별자·부호,대응 부재,매핑 불가,어휘 간극: UCI(한국 식별체계)
+106,audienceNote,데이터 속성,주기(Note),bf:note(bf:Note+noteType),부분 정렬,승격 매핑
+107,awardsNote,데이터 속성,주기(Note),bf:note(bf:Note+noteType),부분 정렬,승격 매핑
+108,bibliography,데이터 속성,주기(Note),bf:note(bf:Note+noteType),부분 정렬,승격 매핑
+109,biographicalNote,데이터 속성,주기(Note),bf:note(bf:Note+noteType),부분 정렬,승격 매핑
+110,citationReferenceNote,데이터 속성,주기(Note),bf:note(bf:Note+noteType),부분 정렬,승격 매핑
+111,exhibition,데이터 속성,주기(Note),bf:note(전시 주기),부분 정렬,의미 재배치
+112,holdingItemNote,데이터 속성,주기(Note),bf:note(bf:Note+noteType),부분 정렬,승격 매핑
+113,issuingBodyNote,데이터 속성,주기(Note),bf:note(bf:Note+noteType),부분 정렬,승격 매핑
+114,languageNote,데이터 속성,주기(Note),bf:note(bf:Note+noteType),부분 정렬,승격 매핑
+115,linkingEntryComplexityNote,데이터 속성,주기(Note),bf:note(bf:Note+noteType),부분 정렬,승격 매핑
+116,locationNote,데이터 속성,주기(Note),bf:note(bf:Note+noteType),부분 정렬,승격 매핑
+117,numberingPeculiaritiesNote,데이터 속성,주기(Note),bf:note(bf:Note+noteType),부분 정렬,승격 매핑
+118,originalVersionNote,데이터 속성,주기(Note),bf:note(bf:Note+noteType),부분 정렬,승격 매핑
+119,physicalFormAvailableNote,데이터 속성,주기(Note),bf:note(bf:Note+noteType),부분 정렬,승격 매핑
+120,reproductionNote,데이터 속성,주기(Note),bf:note(bf:Note+noteType),부분 정렬,승격 매핑
+121,supplementNote,데이터 속성,주기(Note),bf:note(bf:Note+noteType),부분 정렬,승격 매핑
+122,useAndReproductionNote,데이터 속성,주기(Note),bf:note(bf:Note+noteType),부분 정렬,승격 매핑
+123,associatedLanguage,데이터 속성,전거,madsrdf:associatedLanguage,부분 정렬,"BF 코어 밖, MADS/RDF 병용"
+124,birthYear,데이터 속성,전거,madsrdf:birthDate,부분 정렬,"BF 코어 밖, MADS/RDF 병용"
+125,corporateName,데이터 속성,전거,madsrdf:CorporateName,부분 정렬,"BF 코어 밖, MADS/RDF 병용"
+126,dateOfEstablishment,데이터 속성,전거,madsrdf:establishDate,부분 정렬,"BF 코어 밖, MADS/RDF 병용"
+127,deathYear,데이터 속성,전거,madsrdf:deathDate,부분 정렬,"BF 코어 밖, MADS/RDF 병용"
+128,fieldOfActivity,데이터 속성,전거,madsrdf:fieldOfActivity,부분 정렬,"BF 코어 밖, MADS/RDF 병용"
+129,personalName,데이터 속성,전거,madsrdf:PersonalName,부분 정렬,"BF 코어 밖, MADS/RDF 병용"
+130,preferred,데이터 속성,전거,skos:prefLabel / madsrdf 채택표목,부분 정렬,SKOS 계열 재배치
+131,holdingInstitution,데이터 속성,소장·기관 서비스,bf:heldBy,부분 정렬,승격 매핑(문자열→Agent)
+132,localHolding,데이터 속성,소장·기관 서비스,bf:Item+소장 개체,부분 정렬,개체화 수반
+133,dateOfClosed,데이터 속성,소장·기관 서비스,대응 부재,매핑 불가,서지 범위 외
+134,dateOfOpening,데이터 속성,소장·기관 서비스,대응 부재,매핑 불가,서지 범위 외
+135,fax,데이터 속성,소장·기관 서비스,대응 부재(vcard 영역),매핑 불가,서지 범위 외
+136,isClosed,데이터 속성,소장·기관 서비스,대응 부재,매핑 불가,서지 범위 외
+137,libraryType,데이터 속성,소장·기관 서비스,대응 부재,매핑 불가,서지 범위 외
+138,openingYear,데이터 속성,소장·기관 서비스,대응 부재,매핑 불가,서지 범위 외
+139,summerOpenTime,데이터 속성,소장·기관 서비스,대응 부재(schema.org 영역),매핑 불가,서지 범위 외
+140,winterOpenTime,데이터 속성,소장·기관 서비스,대응 부재,매핑 불가,서지 범위 외
+141,confirmDate,데이터 속성,관리 메타데이터,bf:adminMetadata + bf:AdminMetadata(bf:descriptionAuthentication 인접),부분 정렬,개체화 수반: 자원 직접 부착이 아닌 AdminMetadata 개체 경유
+142,dateLinked,데이터 속성,관리 메타데이터,bf:adminMetadata + bf:AdminMetadata(bf:changeDate 인접),부분 정렬,개체화 수반: 자원 직접 부착이 아닌 AdminMetadata 개체 경유
+143,datePublished,데이터 속성,관리 메타데이터,bf:adminMetadata + bf:AdminMetadata(bf:creationDate 인접),부분 정렬,개체화 수반: 자원 직접 부착이 아닌 AdminMetadata 개체 경유
+144,inputDate,데이터 속성,관리 메타데이터,bf:adminMetadata + bf:AdminMetadata(bf:creationDate),부분 정렬,개체화 수반: 자원 직접 부착이 아닌 AdminMetadata 개체 경유
+145,modificationDate,데이터 속성,관리 메타데이터,bf:adminMetadata + bf:AdminMetadata(bf:changeDate),부분 정렬,개체화 수반: 자원 직접 부착이 아닌 AdminMetadata 개체 경유
+146,antecedentSource,데이터 속성,기타 기술 요소,bf:originalVersion 인접,부분 정렬,의미 재배치
+147,degreeYear,데이터 속성,기타 기술 요소,bf:Dissertation+bf:date,부분 정렬,승격 매핑
+148,department,데이터 속성,기타 기술 요소,bf:Dissertation 인접,부분 정렬,의미 재배치
+149,meetingInformation,데이터 속성,기타 기술 요소,bf:Meeting(Agent),부분 정렬,개체화 수반
+150,newsTopic,데이터 속성,기타 기술 요소,bf:subject 인접,부분 정렬,의미 재배치
+151,projection,데이터 속성,기타 기술 요소,bf:projection(bf:Projection),부분 정렬,승격 매핑
+152,restriction,데이터 속성,기타 기술 요소,bf:usageAndAccessPolicy,부분 정렬,승격 매핑
+153,scale,데이터 속성,기타 기술 요소,bf:scale(bf:Scale),부분 정렬,승격 매핑
+154,newsGenre,데이터 속성,기타 기술 요소,대응 부재,매핑 불가,신문기사 특화 요소
+155,newsPosition,데이터 속성,기타 기술 요소,대응 부재,매핑 불가,동일
+156,numberMark,데이터 속성,기타 기술 요소,대응 부재,매핑 불가,용도 불명
+157,rank,데이터 속성,기타 기술 요소,대응 부재,매핑 불가,용도 불명(주석 부재)
